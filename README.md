@@ -8,7 +8,7 @@ The CLI is very simple (for now), it only takes one optional number, which limit
 
 ## Why?
 
-During the pandemic, my time tables got noticably rusty, and I could not find any interactive ways to practice, and randomly generated workbooks seemed a bit too much. So in my spare time I wrote this script
+During the pandemic, my times tables got noticably rusty, and I could not find any interactive ways to practice, and randomly generated workbooks seemed a bit too much. So in my spare time I wrote this script
 
 ## Contribution
 
