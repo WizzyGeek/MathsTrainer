@@ -1,6 +1,6 @@
 # Multiplication Trainer
 
-A simple program, to motivate you to do your time tables
+A simple program, to motivate you to do your times tables
 
 ## CLI
 
