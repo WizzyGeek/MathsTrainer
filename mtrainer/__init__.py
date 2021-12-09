@@ -1,1 +1,1 @@
-from .callibrate import callibrate
+from .calibrate import calibrate

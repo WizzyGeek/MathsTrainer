@@ -4,7 +4,7 @@ from time import perf_counter as time
 from math import log1p, ceil
 import pathlib
 
-from . import callibrate
+from . import calibrate
 
 try:
     from appdirs import AppDirs
@@ -18,9 +18,9 @@ def parse_args(argv=sys.argv):
     if not argv:
         return 10, 10, True
     else:
-        if argv[0].lower() == "callibrate":
+        if argv[0].lower() == "calibrate":
             if appdir is None:
-                print("Callibration dependency not installed")
+                print("Calibration dependency not installed")
                 sys.exit(0)
 
             try:
@@ -28,7 +28,7 @@ def parse_args(argv=sys.argv):
             except Exception:
                 runs = 15
 
-            t = callibrate(runs)
+            t = calibrate(runs)
             data = pathlib.Path(appdir.user_data_dir)
             data.mkdir(exist_ok=True, parents=True)
             with (data / "lag.txt").open("w") as wr:
@@ -42,7 +42,7 @@ def parse_args(argv=sys.argv):
                     "cli:",
                     "mtrainer [multiplcand: int = 10] [mutiplcand2: int = 10]",
                     "mtrainer help",
-                    "mtrainer callibrate [runs: int = 15] [multiplca nd: int = 10] [mutiplcand2: int = 10]",
+                    "mtrainer calibrate [runs: int = 15] [multiplca nd: int = 10] [mutiplcand2: int = 10]",
                     sep="\n" + " " * 4
                 )
                 sys.exit(0)

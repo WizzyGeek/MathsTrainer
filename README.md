@@ -8,13 +8,13 @@ A simple program, to motivate you to do your times tables
 cli:
     mtrainer [multiplcand: int = 10] [mutiplcand2: int = 10]
     mtrainer help
-    mtrainer callibrate [runs: int = 15] [multiplcand: int = 10] [mutiplcand2: int = 10]
+    mtrainer calibrate [runs: int = 15] [multiplcand: int = 10] [mutiplcand2: int = 10]
 ```
 
 Using `mtrainer 20 10` will limit first multiplicand to 20 and
 second multiplicand to 10.
 
-`mtrainer callibrate` measures the time it takes you to read and
+`mtrainer calibrate` measures the time it takes you to read and
 type a number
 
 It is reccommended that you callibrate the average time it takes
@@ -24,7 +24,7 @@ provided along with callibrated time and speed.
 ## Install
 
 ```
-pip install git+https://github.com/WizzyGeek/MathsTrainer.git@master#egg=mtrainer
+pip install "mtrainer[calibration] @ git+https://github.com/WizzyGeek/MathsTrainer.git@master#egg=mtrainer"
 ```
 
 ## Why?

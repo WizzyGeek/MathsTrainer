@@ -2,8 +2,8 @@ import sys
 from time import perf_counter as time
 from random import choice
 
-def callibrate(runs, num1=10, num2=10):
-    print(f"The input speed callibration utility will now run {runs} times")
+def calibrate(runs, num1=10, num2=10):
+    print(f"The input speed calibration utility will now run {runs} times")
     print("Enter the number displayed when prompted")
     print("If a typo occurs simply submit it, that input will be ignored")
 
@@ -21,7 +21,7 @@ def callibrate(runs, num1=10, num2=10):
             try:
                 print(f"{(ans := (choice(nums) * choice(nums2)))}")
                 start = time()
-                assert ans == int(input(">>> Callibrate: "))
+                assert ans == int(input(">>> Calibrate: "))
             except ValueError:
                 print("Enter a valid answer, input discarded")
             except AssertionError:
