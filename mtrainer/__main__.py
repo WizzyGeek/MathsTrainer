@@ -121,14 +121,14 @@ def main(argv=sys.argv):
         print(f"Your score was {score}")
         print(f"User input compenstion: {lag} seconds per question")
         print(f"You took {delta:2f} seconds for {ques} questions. Real time: {r_delta}")
-        print(f"Your avg. speed was, {(ques / delta):2f} questions per second or {tp} seconds per question. Real speed: {(ques / r_delta)}")
+        print(f"Your avg. speed was, {(ques / delta):2f} questions per second or {tp} seconds per question. Real speed: {(ques / r_delta)} q/sec or {r_delta / ques} sec/q")
         print(f"Accuracy {acc:%} :)")
         print(f"Adjusted Accuracy {(1 - 2 * quality / ques):%}")
 
         if score == 0:
             print("You got a zero :O that is very probabilistically unlikely, quit joking around :)")
         elif acc <= 0.5:
-            if acc == 0.5 and (tp >= 1 or tp <= 2):
+            if acc == 0.5 and (tp >= 1 and tp <= 2):
                 print("*Is that you Ayanokoji Kiyotaka?*")
             print("Your accuracy is very bad, work on accuracy before speed")
         elif acc <= 0.75:
@@ -152,14 +152,14 @@ def main(argv=sys.argv):
                 if tp <= 1:
                     print("Good work, you can still improve accuracy!!")
                 elif tp <= 2:
-                    print("You can still improve, callibrate the input speed to get more truthfull results")
+                    print("You can still improve, calibrate the input speed to get more truthfull results")
                 elif tp <= 5:
-                    print("Work o you speed! callibration may help!")
+                    print("Work on your speed")
                 else:
                     print("Accuracy without speed is meaningless")
             else:
                 if tp <= 0.5:
-                    print("Insane!! Are you a robot. Increase the multplicands, and recallibrate")
+                    print("Insane!! Are you a robot. Increase the multplicands, and recalibrate")
                 elif tp <= 1:
                     print("Awesome! You are blazing fast while being correct. Increase the mutplicands to practice more!")
                 elif tp <= 3:
